@@ -38,8 +38,8 @@ Ensure you have the following installed on your local development environment:
 1. Clone the repository:
 
    ```bash
-   git clone https://github.com/yourusername/your-portfolio-repo.git
-   cd your-portfolio-repo
+   git clone https://github.com/tabishkhan03/tabishkhan.git
+   cd tabishkhan
    ```
 
 2. Install dependencies:
