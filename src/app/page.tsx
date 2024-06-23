@@ -38,7 +38,7 @@ export default function Home() {
             <h3>Hi,Myself</h3>
             <h2>Tabish Khan</h2>
             <h3>
-              And I'm a <span ref={el} className="auto-type"></span>
+              And I&#39;m a <span ref={el} className="auto-type"></span>
             </h3>
             <p>
               Experienced Full-Stack Developer proficient in MERN stack, Java,
