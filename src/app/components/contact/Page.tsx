@@ -21,15 +21,13 @@ const Page = () => {
     }));
   };
   const sendMail = async () => {
-    console.log("Sending mail...");
     try {
       const response = await axios.post("/api/sendmail", formData);
       if (response.data.success==true) {
         toast.success("Email sent successfully !");
       }else{
-        toast.error("Error in sending email try again later!")
+        toast.error("Error in sending email try again later!",response.data.data)
       }
-      console.log("Response:", response.data.message);
     } catch (error) {
       console.error("Error:", error);
     }
