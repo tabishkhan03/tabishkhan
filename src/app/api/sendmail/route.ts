@@ -7,7 +7,7 @@ const resend = new Resend(process.env.RESEND_API_KEY);
 
 export async function POST(req: NextRequest) {
   try {
-    const file = await fs.readFile("src/app/emailcount.json",
+    const file = await fs.readFile("../..//emailcount.json",
       "utf8"
     );
     const emailcount = JSON.parse(file);
@@ -35,7 +35,7 @@ export async function POST(req: NextRequest) {
 
     // Update the email count after a successful send
     emailcount.count += 1;
-    await fs.writeFile( "src/app/emailcount.json",
+    await fs.writeFile( "../../emailcount.json",
       JSON.stringify(emailcount, null, 2),
       "utf8"
     );
