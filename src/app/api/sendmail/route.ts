@@ -13,8 +13,7 @@ export async function POST(req: NextRequest) {
     );
     const emailcount = JSON.parse(file);
 
-    const { name, phonenumber, email, emailsub, message }: any =
-      await req.json();
+    const { name, email, phonenumber, emailsub, message }: any = await req.json();
     console.log("name is:", name);
 
     const test = "portfolio" + emailcount.count;
@@ -52,10 +51,10 @@ export async function POST(req: NextRequest) {
   } catch (error) {
     console.error("Error:", error);
     return NextResponse.json({
-        error,
-        message: "Email sent successfully",
-        success: true,
-        status: 200,
-      });
+      error,
+      message: "Failed to send email",
+      success: false,
+      status: 500,
+    });
   }
 }

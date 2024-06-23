@@ -1,19 +1,43 @@
-"use client"
-import React,{useState} from "react";
-import axios from "axios"
+import React, { useState } from "react";
+import axios from "axios";
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 const Page = () => {
+  const [formData, setFormData] = useState({
+    name: "",
+    email: "",
+    phonenumber: "",
+    emailsub: "",
+    message: "",
+  });
 
-  const [FormData,setFormData]=useState();
+  const handleChange = (e: any) => {
+    console.log("hii")
+    const { name, value } = e.target;
+    setFormData((prevData) => ({
+      ...prevData,
+      [name]: value,
+    }));
+  };
+  const sendMail = async () => {
+    console.log("Sending mail...");
+    try {
+      const response = await axios.post("/api/sendmail", formData);
+      if (response.data.success==true) {
+        toast.success("Email sent successfully !");
+      }else{
+        toast.error("Error in sending email try again later!")
+      }
+      console.log("Response:", response.data.message);
+    } catch (error) {
+      console.error("Error:", error);
+    }
+  };
 
-  const sendMail=()=>{
-    const response=axios.post("api/sendmail",)
-  }
-  const handleChange=()=>{
-
-  }
   return (
     <section className="custom-container" id="contact">
+      <ToastContainer />
       <div className="details">
         <h2 className="text-center pb-4 md:pb-12">
           Contact <span className="auto-type">Me.</span>
@@ -28,7 +52,8 @@ const Page = () => {
               name="name"
               placeholder="Full Name"
               id="name"
-              onChange={()=>handleChange()}
+              value={formData.name}
+              onChange={handleChange}
             />
           </div>
           <div className="input-div p-4 w-full lg:w-1/2">
@@ -38,7 +63,8 @@ const Page = () => {
               name="email"
               placeholder="Email Address"
               id="email"
-              onChange={()=>handleChange()}
+              value={formData.email}
+              onChange={handleChange}
             />
           </div>
         </div>
@@ -47,20 +73,22 @@ const Page = () => {
             <input
               className="p-4 w-full rounded-xl"
               type="text"
-              name="number"
+              name="phonenumber"
               placeholder="Mobile Number"
               id="mobile"
-              onChange={()=>handleChange()}
+              value={formData.phonenumber}
+              onChange={handleChange}
             />
           </div>
           <div className="input-div p-4 w-full lg:w-1/2">
             <input
               className="p-4 w-full rounded-xl"
               type="text"
-              name="email-subject"
+              name="emailsub"
               placeholder="Email Subject"
-              id="email-sub"
-              onChange={()=>handleChange()}
+              id="email-subject"
+              value={formData.emailsub}
+              onChange={handleChange}
             />
           </div>
         </div>
@@ -68,16 +96,19 @@ const Page = () => {
           <div className="input-div p-4 w-full">
             <textarea
               className="p-4 w-full rounded-xl"
-              name="number"
+              name="message"
               rows={8}
               placeholder="Your Message"
               id="email-message"
-              onChange={()=>handleChange()}
+              value={formData.message}
+              onChange={handleChange}
             ></textarea>
           </div>
         </div>
         <div className="flex justify-evenly items-center w-1/2">
-          <button className="custom-btn">Send Message</button>
+          <button className="custom-btn" onClick={sendMail}>
+            Send Message
+          </button>
         </div>
       </div>
     </section>
