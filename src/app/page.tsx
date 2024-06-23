@@ -2,13 +2,14 @@
 import React from "react";
 import Link from "next/link";
 import Image from "next/image";
-import About from "@/app/components/about/page";
-import Portfolio from "@/app/components/portfolio/page";
-import Services from "@/app/components/services/page";
+import About from "@/app/components/about/Page";
+import Portfolio from "@/app/components/portfolio/Page";
+import Services from "@/app/components/services/Page";
 import Typed from "typed.js";
 import profile from "@/app/assets/Images/linkedinprofile.jpg";
-import Contact from "@/app/components/contact/page";
-import Footer from "@/app/components/footer/page";
+import Contact from "@/app/components/contact/Page";
+import Footer from "@/app/components/footer/Page";
+import Navbar from "@/app/components/navbar/Page"
 import { LuMail } from "react-icons/lu";
 
 
@@ -30,6 +31,7 @@ export default function Home() {
 
   return (
     <>
+      <Navbar/>
       <section id="home" className=" custom-container">
         <div className="grid grid-cols-12 gap-4">
           <div className="details md:col-span-8 col-span-12 order-2 md:order-1">

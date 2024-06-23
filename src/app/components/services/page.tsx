@@ -6,7 +6,7 @@ import { HiOutlineDatabase } from "react-icons/hi";
 import { CgBrowser } from "react-icons/cg";
 import { IoIosColorPalette } from "react-icons/io";
 
-const page = () => {
+const Page = () => {
   return (
     <section id="services" className="custom-container">
       <div className="details">
@@ -38,4 +38,4 @@ const page = () => {
   );
 };
 
-export default page;
+export default Page;

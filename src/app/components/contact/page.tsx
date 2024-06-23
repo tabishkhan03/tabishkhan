@@ -2,7 +2,7 @@
 import React,{useState} from "react";
 import axios from "axios"
 
-const page = () => {
+const Page = () => {
 
   const [FormData,setFormData]=useState();
 
@@ -84,4 +84,4 @@ const page = () => {
   );
 };
 
-export default page;
+export default Page;

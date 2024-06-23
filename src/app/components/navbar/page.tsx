@@ -2,7 +2,7 @@
 import Link from "next/link";
 import React from "react";
 
-const page = () => {
+const Page = () => {
     let Openmenu=()=>{
         document.querySelector(".phone-menu")?.classList.add("phone-menu-open")
     }
@@ -97,4 +97,4 @@ const page = () => {
   );
 };
 
-export default page;
+export default Page;

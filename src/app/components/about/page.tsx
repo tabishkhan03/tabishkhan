@@ -8,7 +8,7 @@ import { RiNextjsFill,RiTailwindCssFill,RiJavaFill  } from "react-icons/ri";
 import { SiExpress,SiMongodb,SiVercel,SiPostman,SiPhp } from "react-icons/si";
 import { BsFiletypeScss } from "react-icons/bs";
 import { TbBrandCpp } from "react-icons/tb";
-const page = () => {
+const Page = () => {
   const [tab, setTab] = useState(0);
   return (
     <section id="about" className="custom-container">
@@ -128,4 +128,4 @@ const page = () => {
   );
 };
 
-export default page;
+export default Page;
