@@ -35,8 +35,7 @@ export async function POST(req: NextRequest) {
 
     // Update the email count after a successful send
     emailcount.count += 1;
-    await fs.writeFile(
-      process.cwd() + "/src/app/emailcount.json",
+    await fs.writeFile( "src/app/emailcount.json",
       JSON.stringify(emailcount, null, 2),
       "utf8"
     );
