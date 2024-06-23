@@ -2,14 +2,14 @@
 import React from "react";
 import Link from "next/link";
 import Image from "next/image";
-import About from "@/app/components/about/Page";
-import Portfolio from "@/app/components/portfolio/Page";
-import Services from "@/app/components/services/Page";
+import About from "../app/components/about/Page";
+import Portfolio from "../app/components/portfolio/Page";
+import Services from "../app/components/services/Page";
 import Typed from "typed.js";
-import profile from "@/app/assets/Images/linkedinprofile.jpg";
-import Contact from "@/app/components/contact/Page";
-import Footer from "@/app/components/footer/Page";
-import Navbar from "@/app/components/navbar/Page"
+import profile from "../app/assets/Images/linkedinprofile.jpg";
+import Contact from "../app/components/contact/Page";
+import Footer from "../app/components/footer/Page";
+import Navbar from "../app/components/navbar/Page"
 import { LuMail } from "react-icons/lu";
 
 
