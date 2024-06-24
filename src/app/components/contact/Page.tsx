@@ -13,7 +13,6 @@ const Page = () => {
   });
 
   const handleChange = (e: any) => {
-    console.log("hii")
     const { name, value } = e.target;
     setFormData((prevData) => ({
       ...prevData,
@@ -26,7 +25,7 @@ const Page = () => {
       if (response.data.success==true) {
         toast.success("Email sent successfully !");
       }else{
-        toast.error("Error in sending email try again later!",response.data.data)
+        toast.error(`${response.data.message}`)
       }
     } catch (error) {
       console.error("Error:", error);
