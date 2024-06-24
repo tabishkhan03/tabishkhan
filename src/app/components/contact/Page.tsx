@@ -70,7 +70,7 @@ const Page = () => {
           <div className="input-div p-4 w-full lg:w-1/2">
             <input
               className="p-4 w-full rounded-xl"
-              type="text"
+              type="number"
               name="phonenumber"
               placeholder="Mobile Number"
               id="mobile"
