@@ -79,9 +79,11 @@ const Page = () => {
                 <h3 className="center auto-type">Experience</h3>
               </div>
               <div className="tab-content flex flex-wrap gap-4">
-                <AboutCard duration="3 months 2022" designation="Frontend Developer" place="Ideamgaix" />
-                <AboutCard duration="3 months 20023" designation="Fullstack Developer" place="TCR Innovations " />
-                <AboutCard duration="Freelance" designation="Web Developer" place="Modern Aura" />
+                <AboutCard duration="Sep 2022 - Dec 2022 " type="internship" designation="Frontend Developer" place="Ideamgaix" />
+                <AboutCard duration="Aug 2023 - Nov 2023" type="internship" designation="Fullstack Developer" place="TCR Innovations " />
+                <AboutCard duration="Feb 2024 - Apr 2024" type="Freelance" designation="Web Developer" place="Digital-A-Marketing" />
+                <AboutCard duration="Apr 2024 - Jun 2024" type="Freelance" designation="Web Developer" place="Modern Aura" />
+                <AboutCard duration="Jul 2024 - Present" type="internship" designation="Web Developer" place="Genex Corporation" />
               </div>
             </div>
           )}
