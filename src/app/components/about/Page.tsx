@@ -8,8 +8,33 @@ import { RiNextjsFill,RiTailwindCssFill,RiJavaFill  } from "react-icons/ri";
 import { SiExpress,SiMongodb,SiVercel,SiPostman,SiPhp } from "react-icons/si";
 import { BsFiletypeScss } from "react-icons/bs";
 import { TbBrandCpp } from "react-icons/tb";
+
 const Page = () => {
   const [tab, setTab] = useState(0);
+  const about=[
+    {
+      duration:"2022 2023",
+       type:"type 1",
+        designation:"desg 1",
+         place:"place 1,"
+
+    },
+    {
+      duration:"2022 2023",
+       type:"type 1",
+        designation:"desg 1",
+         place:"place 1,"
+
+    },
+    {
+      duration:"2022 2023",
+       type:"type 1",
+        designation:"desg 1",
+         place:"place 1,"
+
+    },
+  ]
+
   return (
     <section id="about" className="custom-container">
       <div className="details">
@@ -83,7 +108,7 @@ const Page = () => {
                 <AboutCard duration="Aug 2023 - Nov 2023" type="internship" designation="Fullstack Developer" place="TCR Innovations " />
                 <AboutCard duration="Feb 2024 - Apr 2024" type="Freelance" designation="Web Developer" place="Digital-A-Marketing" />
                 <AboutCard duration="Apr 2024 - Jun 2024" type="Freelance" designation="Web Developer" place="Modern Aura" />
-                <AboutCard duration="Jul 2024 - Present" type="internship" designation="Web Developer" place="Genex Corporation" />
+                <AboutCard duration="Jul 2024 - Sep 2024" type="internship" designation="Web Developer" place="Genex Corporation" />
               </div>
             </div>
           )}

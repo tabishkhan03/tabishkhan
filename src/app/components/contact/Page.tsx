@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import axios from "axios";
-import { ToastContainer, toast } from 'react-toastify';
-import 'react-toastify/dist/ReactToastify.css';
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 
 const Page = () => {
   const [formData, setFormData] = useState({
@@ -22,10 +22,10 @@ const Page = () => {
   const sendMail = async () => {
     try {
       const response = await axios.post("/api/sendmail", formData);
-      if (response.data.success==true) {
+      if (response.data.success == true) {
         toast.success("Email sent successfully !");
-      }else{
-        toast.error(`${response.data.message}`)
+      } else {
+        toast.error(`${response.data.message}`);
       }
     } catch (error) {
       console.error("Error:", error);
